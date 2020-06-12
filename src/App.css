@@ -1,12 +1,341 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: #1c77c3;
+  height: 100px;
+  width: 100%;
+  z-index: 10;
+}
+.header{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
+.header .logo{
+  margin: auto auto;
+
+  height: 80px;
+}
+.fa-chevron-down{
+  color: white;
+  margin: auto 0;
+  
+  padding-top: 2px;
+}
+.account-dropdown{
+  color: white;
+  font-size: 17px;
+  margin: auto 0;
+  padding-right: 20px;
+}
+.fa-chevron-down:before{
+  font-size: 10px;
+}
+.fa-bars:before{
+  color: white;
+  font-size: 25px;
+}
+.fa-bars{
+  padding-left: 500px;
+  margin: auto 0;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 3fr 3fr 10fr 5fr;
+}
+.sidebar{
+  padding-top: 50px;
+  grid-column: 2;
+}
+.sidebar-header{
+  display: flex;
+  justify-content: center;
+}
+.sidebar-header div{
+  font-weight: 500;
+  font-size: 19px;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+
+.sidebar > ul > li{
+  list-style: none;
+  text-align: left;
+  padding: 8px 10px 8px 30px;
+  width: 200px;
+  grid-column: 2;
+}
+.sidebar > ul > li:hover{
+  background-color: #e6e6e6;
+}
+.fa-credit-card, .fa-truck, .fa-unlock-alt, .fa-chart-line, .fa-heart, .fa-shopping-bag:before{
+  color: black;
+  padding-right: 12px;
+}
+.user-avie{
+  height: 55px;
+  border-radius: 50%;
+  
+}
+svg{
+  padding-right: 500px;
+
+  width: 26px;
+  margin: auto 0;
+  fill: white;
+  
+}
+
+.investments-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.feed-title{
+  text-align: left;
+  font-size: 20px;
+  padding: 20px 0px;
+  font-weight: bold;
+  border-bottom: 1.5px solid #e3e3e3;
+
+  
+}
+.investments-table td, .investments-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-weight: normal;
+}
+
+.investments-table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+.investments-table tr:hover{
+  background-color: #e6e6e6;
+}
+.investments-main tr:first-child:hover{
+  background-color:   rgb(208, 240, 192);
+}
+.investments-main tr:first-child{
+  font-size: 20px;
+  background-color: rgb(208, 240, 192);
+}
+
+.title{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.history-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.history-main > ul > li {
+  list-style: none;
+}
+.section-cutoff{
+  border-bottom: 1.5px solid #e3e3e3;
+  margin: 10px 20px;
+}
+
+.container > .image1{
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 10%;
+}
+
+.image1:hover{
+  transform: scale(1.1);
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+.repurchase{
+  position: relative;
+  border: 1px solid black;
+  padding: 8px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  margin: 0 0 0 auto;
+  width: fit-content;
+  top: -45px;
+  cursor: pointer;
+  z-index: 20;
+  
+}
+.repurchase:hover{
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+.container{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  border-top: 1.5px solid #e3e3e3;
+  padding-top: 13px;
+
+}
+
+.delivery-details{
+position: relative;
+top: -85px;
+}
+.name{
+  font-size: 20px;
+}
+
+.wishlist-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.wish1{
+  width: 90%;
+  border-radius: 10%;
+
+}
+.text{
+  display: none;
+  position: relative;
+  top: -45px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+ 
+}
+
+.wishlist-container > li:hover .text{
+  display: block;  
+}
+.wishlist-container{
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+}
+
+.info-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.info-container > div{
+  border-bottom: 1.5px solid #e3e3e3;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+.info-container{
+  text-align: left;
+}
+
+.info-container p{
+  font-weight:bold;
+}
+.personal{
+  padding-top: 17px;
+}
+.info-container a{
+  color: black;
+}
+
+.shipping-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.add-new-shipping{
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  border: 1px solid black;
+  width: fit-content;
+  font-size: 15px;
+
+}
+.add-new-shipping:hover{
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.ad1{
+  text-align: left;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  width: 50%;
+  padding: 20px;
+  padding-top: 0px;
+  margin-top: 15px;
+}
+.ad1 a{
+  color: black;
+}
+.ad1 p{
+  font-weight: bold;
+}
+.ad2{
+  text-align: left;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  width: 50%;
+  padding: 20px;
+  margin-top: 15px;
+}
+.ad2 a{
+  color: black;
+}
+.payment-main{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.add-new-pay{
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  border: 1px solid black;
+  width: fit-content;
+  font-size: 15px;
+
+}
+.add-new-pay:hover{
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.pay{ 
+  text-align: left;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  width: 50%;
+  padding: 20px;
+  padding-top: 0px;
+  margin-top: 15px;
+}
+.pay p:first-child{
+  font-weight: bold;
+}
+.pay a{
+  color: black;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
